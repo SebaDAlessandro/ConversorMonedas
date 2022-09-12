@@ -4,7 +4,8 @@ import javax.swing.JOptionPane;
 
 public class OpcionesConversion {
     
-    ConvertirMonedas monedas = new ConvertirMonedas();    
+    ConvertirMonedas monedas = new ConvertirMonedas();
+    ConvertirAPesosArgentinos pesos = new ConvertirAPesosArgentinos();  
     
     public void ConvertirMonedas(double valor) {
         
@@ -17,9 +18,29 @@ public class OpcionesConversion {
             case "De Pesos a Euros": 
                 monedas.ConvertirPesosArgentinosAEuros(valor);
                 break;
-              
-        
-            default:
+            case "De Pesos a Libras": 
+                monedas.ConvertirPesosArgentinosALibras(valor);
+                break;
+            case "De Pesos a Yenes": 
+                monedas.ConvertirPesosArgentinosAYen(valor);
+                break;
+            case "De Pesos a Won Coreano": 
+                monedas.ConvertirPesosArgentinosAWon(valor);
+                break;
+            case "De Dólar a Pesos": 
+                pesos.ConvertirDolaresAPesos(valor);;
+                break;
+            case "De Euros a Pesos":
+                pesos.ConvertirEurosAPesos(valor);
+                break;
+            case "De Libras a Pesos":
+                pesos.ConvertirLibrasAPesos(valor);
+                break;
+            case "De Yen a Pesos":
+                pesos.ConvertirYenAPesos(valor);
+                break;
+            case "De Won Coreano a Pesos":
+                pesos.ConvertirWonAPesos(valor);
                 break;
         }
     }
